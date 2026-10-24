@@ -1,0 +1,23 @@
+
+[
+  {
+    "id": 7002,
+    "username": "cypress_user_7002",
+    "firstName": "Cypress",
+    "lastName": "ArrayOne",
+    "email": "cypress.user.7002@example.com",
+    "password": "TestPassword7002!",
+    "phone": "11987654322",
+    "userStatus": 1
+  },
+  {
+    "id": 7003,
+    "username": "cypress_user_7003",
+    "firstName": "Cypress",
+    "lastName": "ArrayTwo",
+    "email": "cypress.user.7003@example.com",
+    "password": "TestPassword7003!",
+    "phone": "11987654323",
+    "userStatus": 1
+  }
+]

@@ -1,0 +1,11 @@
+
+{
+  "id": 7001,
+  "username": "cypress_user_7001",
+  "firstName": "Cypress",
+  "lastName": "Test",
+  "email": "cypress.user.7001@example.com",
+  "password": "TestPassword7001!",
+  "phone": "11987654321",
+  "userStatus": 1
+}

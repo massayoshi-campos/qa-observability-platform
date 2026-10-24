@@ -1,0 +1,18 @@
+{
+  "id": 337,
+  "category": {
+    "id": 12,
+    "name": "Dogs"
+  },
+  "name": "Golden Retriever",
+  "photoUrls": [
+    "https://images.pets.com/golden-retriever-101.jpg"
+  ],
+  "tags": [
+    {
+      "id": 5,
+      "name": "vaccinated"
+    }
+  ],
+  "status": "available"
+}

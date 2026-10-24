@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://petstore.swagger.io/v2/",
+  "env": {
+    "API_KEY": "e2907f1aeb1c3ef65dc1e30a:828e5e49389760c5a1022d3e2882f8fc:e55c8b0661f71a93dd6c9b",
+    "PASSPHRASE": "Pet_Store_Service-QA*"
+  }
+}

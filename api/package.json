@@ -1,0 +1,40 @@
+{
+  "name": "api-petstore-service-cypress",
+  "version": "1.0.0",
+  "description": "API Pet Store Service",
+  "main": "index.js",
+  "scripts": {
+    "test-qa": "cypress run --env configFile=qa",
+    "test-sbx": "cypress run --env configFile=sbx",
+    "test-prd": "cypress run --env configFile=prd",
+    "gui-test-qa": "cypress open --env configFile=qa",
+    "gui-test-sbx": "cypress open --env configFile=sbx",
+    "gui-test-prd": "cypress open --env configFile=prd",
+    "cypress:merge-reports-json": "mochawesome-merge mochawesome-report/*.json -o mochawesome-report/report.json",
+    "cypress:generate-report-html": "marge mochawesome-report/report.json --reportPageTitle \"Petstore API Service\" --reportTitle \"Petstore API Service\" --charts",
+    "cypress:merge-report-html": "mochawesome-merge > mochawesome-report/report.json",
+    "cypress:generate-report-html-local": "marge mochawesome-report\\report.json --reportPageTitle \"Petstore API Service\" --reportTitle \"Petstore API Service\" --charts",
+    "cypress:merge-report-html-local": "mochawesome-merge > mochawesome-report\\report.json",
+    "report:cleanup": "rm -f mochawesome-report/mochawesome_*.json",
+    "report:cleanup-xml": "rm -f mochawesome-report/junit-report-*.xml"
+  },
+  "author": "Massayoshi Pardo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.21.1",
+    "cypress-localstorage-commands": "^2.3.1",
+    "cypress-mochawesome-reporter": "^5.0.0",
+    "cypress-multi-reporters": "^1.6.4",
+    "glob": "^11.0.2",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^8.1.1",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.6",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^5.3.93"
+  }
+}

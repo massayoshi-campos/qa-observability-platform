@@ -1,0 +1,11 @@
+
+{
+  "id": "INVALID_ID",
+  "username": "cypress_invalid_user_9997",
+  "firstName": true,
+  "lastName": "Invalid",
+  "email": "invalid.user@example.com",
+  "password": "TestPassword9997!",
+  "phone": "11987654397",
+  "userStatus": "INVALID_STATUS"
+}

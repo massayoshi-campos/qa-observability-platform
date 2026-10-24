@@ -1,0 +1,18 @@
+{
+  "id": 337,
+  "category": {
+    "id": 13,
+    "name": "Cats"
+  },
+  "name": "Persa",
+  "photoUrls": [
+    "https://images.pets.com/persa-104.jpg"
+  ],
+  "tags": [
+    {
+      "id": 6,
+      "name": "vaccinated"
+    }
+  ],
+  "status": "pending"
+}

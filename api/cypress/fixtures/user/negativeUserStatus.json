@@ -1,0 +1,11 @@
+
+{
+  "id": 7991,
+  "username": "cypress_user_negative_status_7991",
+  "firstName": "Negative",
+  "lastName": "Status",
+  "email": "negative.status.7991@example.com",
+  "password": "TestPassword7991!",
+  "phone": "11987654391",
+  "userStatus": -1
+}

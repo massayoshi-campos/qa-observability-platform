@@ -1,0 +1,19 @@
+
+{
+  "id": 338,
+  "name": "Golden Retriever Available Test",
+  "category": {
+    "id": 12,
+    "name": "Dogs"
+  },
+  "photoUrls": [
+    "https://images.pets.com/golden-retriever-101.jpg"
+  ],
+  "tags": [
+    {
+      "id": 5,
+      "name": "vaccinated"
+    }
+  ],
+  "status": "available"
+}

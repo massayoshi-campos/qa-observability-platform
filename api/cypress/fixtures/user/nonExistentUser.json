@@ -1,0 +1,11 @@
+
+{
+  "id": 7998,
+  "username": "cypress_user_update_not_found_9998",
+  "firstName": "NonExistent",
+  "lastName": "User",
+  "email": "nonexistent.user.7998@example.com",
+  "password": "TestPassword7998!",
+  "phone": "11987654398",
+  "userStatus": 1
+}

@@ -1,0 +1,16 @@
+# Packages and dependencies
+project.lock.json
+nupkg/
+packages/**/*
+node_modules/
+**/node_modules/
+
+# Test reports and artifacts
+**/mochawesome_*.json
+**/junit-report-*.xml
+report.html
+report.json
+reports/
+
+# Sensitive and utility files
+encryptCrypto.js
