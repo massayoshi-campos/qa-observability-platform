@@ -56,16 +56,29 @@ npm install
 
 ```
 - cypress
+  - .github
+    - workflows
+      - cypress.yml
   - config
     - prd.json
     - qa.json
     - sbx.json
   - e2e
+    - pet
+    - store
+    - user
   - fixtures
-    - type_a.json
+    - pet
+      - type_a.json
+    - store
+    - user
   - plugins
     - index.js
   - services
+    - pet
+      - petService.js
+    - store
+    - user
   - support
     - authTagHexCommands.js
     - e2e.js
@@ -76,6 +89,9 @@ npm install
 - Cypress.config.js
 - package-lock.json
 - package.json
+- .gitignore
+- LICENSE
+- README.md
 ```
 
 The project structure consists of the following elements:
@@ -260,7 +276,10 @@ The GitHub Actions CI/CD pipeline is configured to run all tests in a single job
 
 In this model, one main job runs all test suites sequentially, such as:
 
-- `test-api-qa-petstore-pet`
+- `QA - Pet`
+- `QA - Store`
+- `QA - User`
+- `Consolidate QA Reports`
 
 It makes the pipeline easier to understand, maintain, and troubleshoot.
 
