@@ -16,7 +16,9 @@
     "cypress:generate-report-html-local": "marge mochawesome-report\\report.json --reportPageTitle \"Petstore API Service\" --reportTitle \"Petstore API Service\" --charts",
     "cypress:merge-report-html-local": "mochawesome-merge > mochawesome-report\\report.json",
     "report:cleanup": "rm -f mochawesome-report/mochawesome_*.json",
-    "report:cleanup-xml": "rm -f mochawesome-report/junit-report-*.xml"
+    "report:cleanup-xml": "rm -f mochawesome-report/junit-report-*.xml",
+    "observability:cleanup": "node scripts/cleanup-observability-reports.js",
+    "test:qa:observability": "node scripts/run-observability.js"
   },
   "author": "Massayoshi Pardo",
   "license": "ISC",
@@ -32,6 +34,7 @@
     "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
+    "better-sqlite3": "^13.0.3",
     "cross-spawn": "^7.0.6",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",

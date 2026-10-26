@@ -14,3 +14,6 @@ reports/
 
 # Sensitive and utility files
 encryptCrypto.js
+
+# QA Observability - local SQLite database
+database/qa-observability.db
