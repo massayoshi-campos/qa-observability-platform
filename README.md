@@ -28,9 +28,9 @@ This repository contains automated tests for the Petstore API project located wi
 
 ## Prerequisites
 
-Before you begin, make sure that your machine has **Node.js** and **Cypress** installed so that you can run the tests correctly.
+Before you begin, make sure that your machine has **Node.js** installed so that you can run the tests correctly.
 
-For more details on how to install and configure these components, refer to the complete document that provides a detailed step-by-step guide for the entire process. You can access it through this link [Installation, Configuration, and Test Execution Guide with Cypress](Under construction).
+For more details on how to install and configure these components, refer to the complete document that provides a detailed step-by-step guide for the entire process. You can access it through this link [Installation, Configuration, and Test Execution Guide with Cypress](https://medium.com/@massayoshi.campos/installation-configuration-and-test-execution-guide-with-cypress-a0a0eebbe2e6?postPublishedType=initial).
 
 ## Installation
 
@@ -153,6 +153,69 @@ This script is used to open the Cypress graphical user interface in the Quality 
 ```shell
 npm run gui-test-qa
 ```
+
+### QA Observability Platform
+
+This script is used to start the QA Observability API, enabling the platform to receive and provide test execution data.
+
+```shell
+npm run observability:api
+```
+
+This script is used to execute automated tests in the QA environment and process the results through the QA Observability Platform.
+
+```shell
+npm run test:qa:observability
+```
+
+### QA Observability Platform — Execution Flow
+
+The QA Observability Platform automates test execution, collects results, stores execution data in SQLite, and makes the information available through a REST API.
+
+When the following command is executed, the platform performs these steps:
+
+1. Cleans up previous test report JSON files.
+2. Executes Cypress tests in the QA environment.
+3. Generates Mochawesome JSON reports.
+4. Collects test results and stores them in the SQLite database.
+5. Consolidates JSON reports and generates the HTML report.
+6. Makes the stored results available through the Observability API.
+
+### Observability API Endpoints
+
+The Observability API runs on port `3000` by default.
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/health` | Checks API availability. |
+| GET | `/api/v1/observability/summary` | Retrieves execution summary metrics. |
+| GET | `/api/v1/observability/runs/latest` | Retrieves the latest test execution. |
+| GET | `/api/v1/observability/runs` | Retrieves historical test executions. |
+| GET | `/api/v1/observability/runs/:id` | Retrieves details of a specific execution. |
+| GET | `/api/v1/observability/suites/performance` | Retrieves test suite performance metrics. |
+| GET | `/api/v1/observability/suites/slowest` | Retrieves the slowest test suites. |
+
+**Base URL:** `http://localhost:3000`
+
+### Collected Test Data
+
+The platform processes Mochawesome JSON reports to collect test execution information, including:
+
+- Total, passed, failed, pending, and skipped tests.
+- Execution duration.
+- Test suite information and performance.
+- Test execution history.
+- Execution environment.
+
+The collected information is stored in SQLite and exposed through the Observability API.
+
+### Integration with External Applications
+
+The Observability API allows other software applications to retrieve test execution results using standard HTTP requests.
+
+Grafana can use these endpoints to display dashboards and metrics. Other applications, reporting systems, and CI/CD pipelines can also consume the available data without directly accessing the SQLite database.
+
+This approach makes the QA Observability Platform reusable and extensible, allowing different tools to integrate with the same centralized source of test execution data.
 
 # Mochawesome Documentation
 
